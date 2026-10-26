@@ -1,0 +1,13 @@
+/* 1. WARNA HALAMAN FULL */
+body {
+  background-color: #90EE90;
+}
+
+/* 2. WARNA TABEL */
+table {
+  background-color: #ffffff;
+}
+th {
+      background-color: #1b4d3e;
+      color: #ffffff;
+    }

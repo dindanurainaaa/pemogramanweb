@@ -1,6 +1,6 @@
 /* 1. CSS VARIABELS */
 :root {
-    --primary-color: #008080;
+    --primary-color: #005050;
     --primary-dark: #005A5A;
     --accent-color: #FF9800;
     --secondary-color: #1A252C;
@@ -23,8 +23,8 @@
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(secondary-color);
-    background-color: var(bg-light);
+    color: var(--secondary-color);
+    background-color: var(--bg-light);
 }
 
 
@@ -43,22 +43,18 @@ header {
     padding: 25px 0;
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
 
 header h1 {
-    font size: 2rem;
+    font-size: 2rem;
     margin-bottom: 5px;
 }
 
 header p {
-    font size: 0.95rem;
+    font-size: 0.95rem;
     opacity: 0.9;
     margin-bottom: 15px;
-}
-
-nav {
-    margin-top: 10px;
-    font-size: 0.95rem;
 }
 
 nav a {
@@ -67,7 +63,7 @@ nav a {
     padding: 6px 14px;
     margin: 0 2px;
     border-radius: 4px;
-    transition: var(--transition-fast)
+    transition: var(--transition-fast);
 }
 
 nav a:hover, nav a.active {
