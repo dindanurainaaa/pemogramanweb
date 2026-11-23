@@ -19,77 +19,90 @@
         </nav>
     </div>
 </header>
-<main>
-    <h2>Formulir Pemesanan Jasa & Layanan Pelanggan</h2>
-    <p>Silahkan isi formulir di bawah ini untuk mengajukan pemesanan paket jasa atau berkonsultasi dengan tim ahli kami.</p>
-    
-    <form action="#" method="post">
-        <!-- Grup 1 : Data Diri Pelanggan -->
-         <fieldset>
-            <legend><b>1. Informasi Identitas Pemesan</b></legend>
-            <br>
-            <label for="nama_lengkap">Nama Lengkap / Instansi:</label><br>
-            <input type="text" name="nama_lengkap" id="nama_lengkap"
-            placeholder="Contoh: Effan Najwaini" required>
-         <br><br>
+<main class="container">
+    <section class="section">
+    <h2 class="section-title">Formulir Pemesanan Jasa & Layanan Pelanggan</h2>
+    <p class="section-subtitle">Silahkan isi formulir di bawah ini untuk mengajukan pemesanan paket jasa atau berkonsultasi dengan tim ahli kami.</p>
 
-         <label for="email_pemesan">Alamat Email Aktif:</label><br>
-         <input type="email" name="email_pemesan" id="email_pemesan"
+    <div class="contact-wrapper">
+        <div class="contact-form-card">
+            <form action="#" method="post">
+        <!-- Grup 1 : Data Diri Pelanggan -->
+         <fieldset class="form-fieldset">
+            <legend>1. Informasi Identitas Pemesan</legend>
+            <div class="form-group">
+                <label for="email_pemesan">Alamat Email Aktif:</label><br>
+                <input type="email" name="email_pemesan" id="email_pemesan"
          id="email_pemesan" placeholder="nama@domain.com"
          size="40" required>
-         <br><br>
+            </div>
+            <div class="class-form-group">
+                <label for="nama_lengkap">Nama Lengkap / Instansi: <span class="required">*</span></label>
+                <input type="text" name="nama_lengkap" id="nama_lengkap"
+                placeholder="Contoh: Effan Najwaini" required>
+            </div>
 
-         <label for="no_whatsaap">Nomor WhatsApp / HP :</label><br>
+            <div class="class-form-group">
+                <label for="no_whatsaap">Nomor WhatsApp / HP : <span class="required">*</span></label>
          <input type="tel" id="no_whatsaap" name="no_whatsaap"
          placeholder="083142176800" required>
-         <br><br>
+            </div>
 
-         <label>Tipe Kategori Klien:</label><br>
-         <input type="radio" id="Kategori_personal"
-         name="tipe_klien" value="Personal" checked>
-         <label for="kategori personal">Perorangan / UMKM</label>&nbsp;nbsp;nbsp;nbsp
-         <input type="radio" name="tipe_klien"
-         id ="kategori_korporat" value="Korporat"
-         <label for="kategori_korporat">Perusahaan / Instansi Pemerintah</label>
-         <br><br>
-         </fieldset>
-         <br>
+            <div class="class-form-group">
+                <label>Tipe Kategori Klien:</label>
+                <div class="radio-group">
+                    <label class="inline label">
+                    <input type="radio" id="Kategori_personal" name="tipe_klien" value="Personal" checked> Perorangan / UMKM
+                </label>
+                <label class="inline label">
+                    <input type="radio" name="tipe_klien" id="kategori_korporat"
+                    value="Korporat"> Perusahaan / Instansi Pemerintah
+                </label>
+            </div>  
+            </div>
+        </fieldset>
+
          <!-- Grup 2: Detail Pemesanan Layanan -->
          <fieldset>
-            <legend><b>2. Rincian Pemesanan Jasa Digital</b></legend><br>
-            <label for="pilih_paket">Pilih Paket Layanan (Lihat katalog di halaman Produk): </label><br>
+            <legend><b>2. Rincian Pemesanan Jasa Digital</b></legend>
+            <div class="class-form-group">
+            <label for="pilih_paket">Pilih Paket Layanan (Lihat katalog di halaman Produk): </label>
             <select name="pilih_paket" id="pilih_paket" required>
             <option value="">-- Pilih Paket Jasa --</option>
             <option value="Silver">Paket Silver Branding (Rp.1.500.000)</option>
             <option value="Gold">Paket Gold Web Development (Rp.3.000.000)</option>
             <option value="Platinum">Paket Platinum Full Digital Transformation (Rp.5.000.000)</option>
             <option value="Custom">Konsultasi Custom Project</option>
-        </select>
-        <br><br>
-
+</select>
+</div>
+<div class="class-from-group">
+        <div class="class-form-group">
         <label>Layanan Tambahan (Add-Ons):</label><br>
         <input type="checkbox" name="addons[]" id="addon_seo" value="SEO Optimization">
-        <label for="addon_seo">Optimasi SEO On-Page (+ Rp.5.000.000)</label><br>
+        <label for="addon_seo">Optimasi SEO On-Page (+ Rp.5.000.000)</label>
         <input type="checkbox" name="addons[]" id="addon_express"
         value ="Express Delivery">
-        <label for="addon_express">Pengerjaan Kilat 3 Hari (+ Rp.750.000)</label><br>
-        <input type="checkbox" name="addons[]" id="addons_content"
+        <label for="addon_express">Pengerjaan Kilat 3 Hari (+ Rp.750.000)</label>
+        <input type="checkbox" name="addons[]" id="addons_content">
         value="Content Writing"
-        <label for="addons_content">Penulisan Konten artikel & Copywriting (+ Rp 400.000)</label>
-        <br><br>
 
-        <label for="target_selesai">Estimasi Target Selesai:</label><br>
+        <label for="addons_content">Penulisan Konten artikel & Copywriting (+ Rp 400.000)</label>
+</div>
+
+        <div class="class-form-group">
+        <label for="target_selesai">Estimasi Target Selesai:</label>
         <input type="date" id="target_selesai" name="target_selesai">
-        <br><br>
+        </div>
 
         <textarea for="detail_pesan" id="detail_pesan" rows="6" cols="50"
         placeholder="Tuliskan gambaran singkat mengenai proyek yang anda inginkan...."></textarea>
         <br><br>
-    </fieldset>
+</fieldset>
         <button type="submit"><b>Kirim Pemesanan Sekarang</b></button>
         <button type="reset">Bersihkan Formulir</button>
-    </form>
-    <!-- Bagian Informasi Alamat dan Peta Studio -->
+</form>
+</div>
+        <!-- Bagian Informasi Alamat dan Peta Studio -->
     <section>
         <hr>
         <h3>Kantor & Studio Operasional</h3>
@@ -102,10 +115,12 @@
         <h4>Lokasi Studio di Google Maps</h4>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.219741087652!2d114.5793553739901!3d-3.295688541121988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de423a80d47ba6b%3A0x8f5abfaddfe5a2d7!2sPoliteknik%20Negeri%20Banjarmasin!5e0!3m2!1sen!2sid!4v1790216975678!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>"
         width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+</section>
+</div>
+
+</section>
 </main>
 <footer>
-    <hr>
     <p align="center">&copy; 2026 Poliban DigiCraft Studio - Hak Cipta Dilindungi Undang-Undang.</p>
 </footer>
 
